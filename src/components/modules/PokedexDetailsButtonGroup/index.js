@@ -12,10 +12,7 @@ export const PokedexDetailsButtonGroup = (props) => {
     <div className="button-group">
       {
         isLoading ?
-          <>
-            <Placeholder variant="rounded" width={'100%'} height={'60px'} />
-            <Placeholder variant="rounded" width={'100%'} height={'60px'} />
-          </>
+          <Placeholder variant="rounded" width={'100%'} height={'60px'} quantity={2} />
           :
           <>
             <Button

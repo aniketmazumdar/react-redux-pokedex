@@ -13,17 +13,17 @@ export const PokedexDetailsStrategies = (props) => {
 
       <div className='stats'>
         {
-          stats && Object.keys(stats)?.map((stat, indx) => (
-            isLoading ?
-              <Placeholder variant="rounded" width={'100%'} height={'24px'} />
-              :
-              (<div className='stat-child' key={indx} data-testid={'test-stat-child-' + indx}>
+          isLoading ?
+            <Placeholder variant="rounded" width={'100%'} height={'24px'} quantity={Object.keys(stats).length} />
+            :
+            stats && Object.keys(stats)?.map((stat, indx) => (
+              <div className='stat-child' key={indx} data-testid={'test-stat-child-' + indx}>
                 <span>{statNameConstants[stat] ?? 'N/A'}</span>
                 <Progress
                   rate={stats[stat] ?? 0}
                 />
-              </div>)
-          ))
+              </div>
+            ))
         }
       </div>
     </div>

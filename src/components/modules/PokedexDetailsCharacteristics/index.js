@@ -10,12 +10,7 @@ export const PokedexDetailsCharacteristics = (props) => {
       {
         isLoading ?
           <>
-            <Placeholder variant="rounded" width={'100%'} height={'80px'} />
-            <Placeholder variant="rounded" width={'100%'} height={'80px'} />
-            <Placeholder variant="rounded" width={'100%'} height={'80px'} />
-            <Placeholder variant="rounded" width={'100%'} height={'80px'} />
-            <Placeholder variant="rounded" width={'100%'} height={'80px'} />
-            <Placeholder variant="rounded" width={'100%'} height={'80px'} />
+            <Placeholder variant="rounded" width={'100%'} height={'80px'} quantity={6} />
             <Placeholder variant="rounded" width={'220%'} height={'80px'} />
           </>
           :
